@@ -1,9 +1,11 @@
 # src/controller/main_controller.py
-from flask import Flask
+from flask import Flask, jsonify
 
-class MainController:
-    def __init__(self, app: Flask):
-        self.app = app
+app = Flask(__name__)
 
-    def hello_world(self):
-        return "Hello, World!"
+
+
+
+@app.route('/')
+def home():
+    return jsonify({"message": "Pagina Teste"})

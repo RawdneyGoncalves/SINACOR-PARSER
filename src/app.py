@@ -1,8 +1,4 @@
-from flask import Flask
-
-app = Flask(__name)
-
-# ... outras configurações do aplicativo ...
+from controllers.main_controller import app
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
