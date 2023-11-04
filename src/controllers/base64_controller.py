@@ -1,6 +1,8 @@
-# projeto/src/controller/base64_controller.py
-from flask import Blueprint
+from flask import Flask
+from src.controllers.base64_controller import base64_controller  
+from main_controller import app 
 
+app.register_blueprint(base64_controller, url_prefix='/base64')
 
-
-base64_controller = Blueprint('base64', __name__)
+if __name__ == '__main__':
+    app.run()
